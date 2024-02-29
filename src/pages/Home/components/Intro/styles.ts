@@ -7,6 +7,10 @@ export const IntroConteiner = styled.section`
     height: 34rem;
     background: ${() => `url(${introBackgroundImg}) no-repeat center`};
     background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const IntroTitle = styled(TitleText)`
@@ -18,4 +22,12 @@ export const IntroContent = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 3.5rem;
+`;
+
+export const BenefitsContainer = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.25rem;
+    margin-top: 4.125rem;
 `;
