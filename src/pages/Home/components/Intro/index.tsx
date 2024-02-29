@@ -21,8 +21,9 @@ export function Intro() {
                 </section>
 
                 <BenefitsContainer>
-                    <InfoWithIcon iconBg={colors["brand-yellow-dark"]} icon={<ShoppingCart weight="fill" />} text="Compra simples e segura" />
-                    <InfoWithIcon iconBg={colors["base-text"]} icon={<Package weight="fill" />} text="Embalagem mantém o café intacto" />
+                    <InfoWithIcon
+                    icon={<ShoppingCart weight="fill"/>}
+                    />
                     <p>Compra simples e segura</p>
                     <p>Entrega rápida e rastreada</p>
                     <p>Embalagem mantém o café intacto</p>
