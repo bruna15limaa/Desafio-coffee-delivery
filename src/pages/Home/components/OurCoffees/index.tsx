@@ -10,8 +10,15 @@ export function OurCoffees() {
             </TitleText>
             <CoffeeList>
                 <CoffeeCard/>
+                <CoffeeCard/>
+                <CoffeeCard/>
+                <CoffeeCard/>
+                <CoffeeCard/>
+                <CoffeeCard/>
+                <CoffeeCard/>
+                <CoffeeCard/>
             </CoffeeList>
-            <CoffeeCard />
+            
         </OurCoffeesContainer>
     )
 }
