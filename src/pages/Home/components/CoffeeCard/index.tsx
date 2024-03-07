@@ -3,22 +3,37 @@ import Coffee01 from '../../../../assets/tradicional.png'
 import { RegularText, TitleText } from "../../../../components/typography";
 import { QuantityInput } from "../QuantityInput";
 import { ShoppingCart } from "phosphor-react";
+import { formatMoney } from "../../../../utils/formatMoney";
 
+export interface Coffee {
+    id: number;
+    tags: string[];
+    description: string;
+    photo: string;
+    price: number;
+}
 
-export function CoffeeCard() {
+interface CoffeeProps {
+    coffee: Coffee;
+}
+
+export function CoffeeCard({ coffee }: CoffeeProps) {
+    const formattedPrice = formatMoney(coffee.price);
+    
     return (
         <CoffeeCardContainer>
-            <img src={Coffee01} alt="" />
+            <img src={`/coffees/${coffee.photo}`} alt="" />
             <Tags>
-                <span>Tradicional</span>
-                <span>Com leite</span>
+             {coffee.tags.map(tag => (
+                <span key={`${coffee.id}${tag}`}>{tag}</span>
+             ))}
             </Tags>
-            <Name>Expresso Tradicional</Name>
-            <Description>O tradicional café feito com água quente e grãos moídos</Description>
+            <Name>{coffee.name}</Name>
+            <Description>{coffee.description}</Description>
             <CardFooter>
                 <div>
                     <RegularText size="s">R$</RegularText>
-                    <TitleText size="m" color="text" as="strong">9,90</TitleText>
+                    <TitleText size="m" color="text" as="strong">{formattedPrice}</TitleText>
                 </div>
 
                 <AddCartWrapper>
