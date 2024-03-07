@@ -1,5 +1,5 @@
 import { AddCartWrapper, CardFooter, CoffeeCardContainer, Description, Name, Tags } from "./styles";
-import Coffee01 from '../../../../assets/Coffee-01.png'
+import Coffee01 from '../../../../assets/tradicional.png'
 import { RegularText, TitleText } from "../../../../components/typography";
 import { QuantityInput } from "../QuantityInput";
 import { ShoppingCart } from "phosphor-react";
